@@ -52,7 +52,7 @@ BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	pkgconfig(opencv)
 # For python-bindings
 BuildRequires:	swig
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 
 %description
 MLT is an open source multimedia framework, designed and developed for
@@ -169,13 +169,13 @@ CXXFLAGS="%{optflags} -std=gnu++14" %configure \
 	--enable-motion-est \
 	--qt-libdir=%{_qt5_libdir} \
 	--qt-includedir=%{_qt5_includedir} \
-	--swig-languages='python2'
+	--swig-languages='python'
 
 %make
 
 %install
 %makeinstall_std
 install -d %{buildroot}%{py2_platsitedir}
-install -pm 0644 src/swig/python2/%{name}.py* %{buildroot}%{py2_platsitedir}/
-install -pm 0755 src/swig/python2/_%{name}.so %{buildroot}%{py2_platsitedir}/
+install -pm 0644 src/swig/python/%{name}.py* %{buildroot}%{py2_platsitedir}/
+install -pm 0755 src/swig/python/_%{name}.so %{buildroot}%{py2_platsitedir}/
 
