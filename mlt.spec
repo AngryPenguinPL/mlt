@@ -175,7 +175,7 @@ CXXFLAGS="%{optflags} -std=gnu++14" %configure \
 
 %install
 %makeinstall_std
-install -d %{buildroot}%{py_platsitedir}
-install -pm 0644 src/swig/python/%{name}.py* %{buildroot}%{py_platsitedir}/
-install -pm 0755 src/swig/python/_%{name}.so %{buildroot}%{py_platsitedir}/
+install -d %{buildroot}%{py2_platsitedir}
+install -pm 0644 src/swig/python/%{name}.py* %{buildroot}%{py2_platsitedir}/
+install -pm 0755 src/swig/python/_%{name}.so %{buildroot}%{py2_platsitedir}/
 
