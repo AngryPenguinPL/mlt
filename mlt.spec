@@ -52,7 +52,7 @@ BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	pkgconfig(opencv)
 # For python-bindings
 BuildRequires:	swig
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 
 %description
 MLT is an open source multimedia framework, designed and developed for
@@ -129,8 +129,8 @@ Requires:	%{name} = %{EVRD}
 This module allows to work with MLT using python.
 
 %files -n python-%{name}
-%{py_platsitedir}/%{name}.p*
-%{py_platsitedir}/_%{name}.so
+%{py2_platsitedir}/%{name}.p*
+%{py2_platsitedir}/_%{name}.so
 
 #----------------------------------------------------------------------------
 
