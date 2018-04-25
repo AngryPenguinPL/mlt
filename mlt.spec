@@ -129,7 +129,7 @@ Requires:	%{name} = %{EVRD}
 This module allows to work with MLT using python.
 
 %files -n python-%{name}
-%{py2_platsitedir}/%{name}.p*
+%{py2_platsitedir}/%{name}.py
 %{py2_platsitedir}/_%{name}.so
 
 #----------------------------------------------------------------------------
@@ -176,6 +176,6 @@ CXXFLAGS="%{optflags} -std=gnu++14" %configure \
 %install
 %makeinstall_std
 install -d %{buildroot}%{py2_platsitedir}
-install -pm 0644 src/swig/python/%{name}.py* %{buildroot}%{py2_platsitedir}/
+install -pm 0644 src/swig/python/%{name}.py %{buildroot}%{py2_platsitedir}/
 install -pm 0755 src/swig/python/_%{name}.so %{buildroot}%{py2_platsitedir}/
 
