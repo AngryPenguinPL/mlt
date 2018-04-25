@@ -10,7 +10,7 @@
 Summary:	Media Lovin' Toolkit nonlinear video editing library
 Name:		mlt
 Version:	6.4.1
-Release:	4
+Release:	5
 License:	LGPLv2+
 Group:		Video
 Url:		http://mlt.sourceforge.net
@@ -122,7 +122,7 @@ applications which will use mlt.
 %package -n python-%{name}
 Summary:	Python bindings for MLT
 Group:		Development/Python
-Requires:	python
+Requires:	python2
 Requires:	%{name} = %{EVRD}
 
 %description -n python-%{name}
@@ -169,7 +169,7 @@ CXXFLAGS="%{optflags} -std=gnu++14" %configure \
 	--enable-motion-est \
 	--qt-libdir=%{_qt5_libdir} \
 	--qt-includedir=%{_qt5_includedir} \
-	--swig-languages='python'
+	--swig-languages='python2'
 
 %make
 
