@@ -169,7 +169,7 @@ CXXFLAGS="%{optflags} -std=gnu++14" %configure \
 	--enable-motion-est \
 	--qt-libdir=%{_qt5_libdir} \
 	--qt-includedir=%{_qt5_includedir} \
-	--swig-languages='python2'
+	--swig-languages='python'
 
 %make
 
